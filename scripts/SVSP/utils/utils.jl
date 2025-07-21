@@ -3,6 +3,7 @@ using DecisionFocusedLearningBenchmarks.StochasticVehicleScheduling:
     evaluate_solution, compact_mip, local_search, deterministic_mip
 using Gurobi
 using JLD2
+using Plots
 using StatsBase: StatsBase
 using Statistics: mean
 using MLUtils: splitobs, numobs

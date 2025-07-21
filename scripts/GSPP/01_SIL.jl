@@ -1,5 +1,8 @@
 include("utils/utils.jl")
 
+# Env initialization
+env = GridWorld();
+
 # SIL setup
 _, __, dataset = expert_solution(env, 100; first_seed=1, create_dataset=true);
 

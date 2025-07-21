@@ -1,5 +1,8 @@
 include("utils/utils.jl")
 
+# Env initialization
+env = GridWorld();
+
 # PPO update function
 function PPO_update!(
     env::GridWorld,

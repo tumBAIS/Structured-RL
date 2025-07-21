@@ -7,6 +7,9 @@ using InferOpt
 
 include("utils/utils.jl")
 
+dataset = load(dataset_path)["dataset"]
+train_set, val_set, test_set = splitobs(dataset; at=(50, 50));
+
 # PPO training function
 function PPO_training(
     model,
