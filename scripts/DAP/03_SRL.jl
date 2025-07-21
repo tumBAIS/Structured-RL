@@ -192,7 +192,7 @@ function SRL_dynamic(
 end
 
 # Train SRL
-SRL_model, train_hist, val_hist, losses = SRL_dynamic(
+SRL_model, SRL_train, SRL_val, losses = SRL_dynamic(
     env,
     SRL_model,
     critic_rew,

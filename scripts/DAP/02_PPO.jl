@@ -156,7 +156,7 @@ function PPO_dynamic(
 end
 
 # Train PPO
-PPO_model, train_hist, val_hist, losses = PPO_dynamic(
+PPO_model, PPO_train, PPO_val, losses = PPO_dynamic(
     env,
     PPO_model,
     critic_rew,
