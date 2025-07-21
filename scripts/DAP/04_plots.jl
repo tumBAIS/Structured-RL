@@ -182,6 +182,7 @@ dap_training_plot = training_plot(
     ylabel_text="val. rew. (10^1)",
 );
 display(dap_training_plot)
+savefig(dap_training_plot, joinpath(plotdir, "dap_training_plot.pdf"))
 
 # Results plot
 dap_results_plot = boxplot_greedy(
@@ -192,3 +193,4 @@ dap_results_plot = boxplot_greedy(
     ytext="DAP: delta greedy (%)",
 );
 display(dap_results_plot)
+savefig(dap_results_plot, joinpath(plotdir, "dap_results_plot.pdf"))

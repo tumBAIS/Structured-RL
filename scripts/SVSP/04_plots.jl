@@ -182,6 +182,7 @@ svsp_training_plot = training_plot(
     ylabel_text="val. rew. (10^3)",
 );
 display(svsp_training_plot)
+savefig(svsp_training_plot, joinpath(plotdir, "svsp_training_plot.pdf"))
 
 # Results plot
 svsp_results_plot = boxplot_greedy(
@@ -192,3 +193,4 @@ svsp_results_plot = boxplot_greedy(
     ytext="SVSP: delta greedy (%)",
 );
 display(svsp_results_plot)
+savefig(svsp_results_plot, joinpath(plotdir, "svsp_results_plot.pdf"))

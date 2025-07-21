@@ -182,6 +182,7 @@ gspp_training_plot = training_plot(
     ylabel_text="val. rew. (10^2)",
 );
 display(gspp_training_plot)
+savefig(gspp_training_plot, joinpath(plotdir, "gspp_training_plot.pdf"))
 
 # Results plot
 gspp_results_plot = boxplot_greedy(
@@ -192,3 +193,4 @@ gspp_results_plot = boxplot_greedy(
     ytext="GSPP: delta greedy (%)",
 );
 display(gspp_results_plot)
+savefig(gspp_results_plot, joinpath(plotdir, "gspp_results_plot.pdf"))

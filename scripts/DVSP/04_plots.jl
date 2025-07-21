@@ -186,6 +186,7 @@ dvsp_training_plot = training_plot(
     ylabel_text="val. rew.",
 );
 display(dvsp_training_plot)
+savefig(dvsp_training_plot, joinpath(plotdir, "dvsp_training_plot.pdf"))
 
 # Results plot
 dvsp_results_plot = boxplot_greedy(
@@ -196,3 +197,4 @@ dvsp_results_plot = boxplot_greedy(
     ytext="DVSP: delta greedy (%)",
 );
 display(dvsp_results_plot)
+savefig(dvsp_results_plot, joinpath(plotdir, "dvsp_results_plot.pdf"))

@@ -182,6 +182,7 @@ wspp_training_plot = training_plot(
     ylabel_text="val. rew.",
 );
 display(wspp_training_plot)
+savefig(wspp_training_plot, joinpath(plotdir, "wspp_training_plot.pdf"))
 
 # Results plot
 wspp_results_plot = boxplot_greedy(
@@ -192,3 +193,4 @@ wspp_results_plot = boxplot_greedy(
     ytext="WSPP: delta greedy (%)",
 );
 display(wspp_results_plot)
+savefig(wspp_results_plot, joinpath(plotdir, "wspp_results_plot.pdf"))

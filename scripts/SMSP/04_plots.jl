@@ -184,6 +184,7 @@ smsp_training_plot = training_plot(
     yticks=[-30, -25, -20, -15],
 );
 display(smsp_training_plot)
+savefig(smsp_training_plot, joinpath(plotdir, "smsp_training_plot.pdf"))
 
 # Results plot
 smsp_results_plot = boxplot_greedy(
@@ -194,3 +195,4 @@ smsp_results_plot = boxplot_greedy(
     ytext="SMSP: delta greedy (%)",
 );
 display(smsp_results_plot)
+savefig(smsp_results_plot, joinpath(plotdir, "smsp_results_plot.pdf"))
