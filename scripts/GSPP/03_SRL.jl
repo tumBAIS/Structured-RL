@@ -1,5 +1,8 @@
 include("utils/utils.jl")
 
+# Env initialization
+env = GridWorld();
+
 # SRL update function
 function SRL_update!(
     env::GridWorld,

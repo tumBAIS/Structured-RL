@@ -1,5 +1,8 @@
 include("utils/utils.jl")
 
+# Env initialization
+env = DAP(20, 2, 4, 200)
+
 initial_model = load(joinpath(logdir, "DAP_initial_model.jld2"))["actor"]
 critic_1 = load(joinpath(logdir, "DAP_critic_rew.jld2"))["critic"]
 critic_2 = load(joinpath(logdir, "DAP_critic_fut.jld2"))["critic"]
@@ -189,7 +192,7 @@ function SRL_dynamic(
 end
 
 # Train SRL
-SRL_model, train_hist, val_hist, losses = SRL_dynamic(
+SRL_model, SRL_train, SRL_val, losses = SRL_dynamic(
     env,
     SRL_model,
     critic_rew,

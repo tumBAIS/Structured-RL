@@ -1,5 +1,8 @@
 include("utils/utils.jl")
 
+# Env initialization
+env = DAP(20, 2, 4, 200)
+
 initial_model = load(joinpath(logdir, "DAP_initial_model.jld2"))["actor"]
 critic_1 = load(joinpath(logdir, "DAP_critic_rew.jld2"))["critic"]
 critic_2 = load(joinpath(logdir, "DAP_critic_fut.jld2"))["critic"]
@@ -153,7 +156,7 @@ function PPO_dynamic(
 end
 
 # Train PPO
-PPO_model, train_hist, val_hist, losses = PPO_dynamic(
+PPO_model, PPO_train, PPO_val, losses = PPO_dynamic(
     env,
     PPO_model,
     critic_rew,
