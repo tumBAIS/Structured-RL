@@ -141,7 +141,7 @@ SRL_model, SRL_train, SRL_val, SRL_losses = SRL_SMSP(;
     no_samples=40,
     sigmaB_values=[2.0, 2.0],
     lr_values=[2e-3, 1e-3],
-    temp_values=[1.0, 1.0],
+    temp_values=[1e3, 1e3],
 );
 
 # Test the trained model

@@ -1,7 +1,14 @@
 include("utils/utils.jl");
 
+"""
+Seeds used in the paper:
+
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+"""
+
 # Import dataset
 Random.seed!(63);
+
 data_path = joinpath(datadep"warcraft", "data")
 options = (nb_epochs=100, batch_size=80, lr_start=0.001);
 

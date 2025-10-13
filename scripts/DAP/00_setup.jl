@@ -4,6 +4,14 @@ using Random
 
 include("utils/utils.jl")
 
+"""
+Seeds used in the paper:
+
+[14, 16, 18, 19, 28, 34, 41, 57, 72, 95]
+
+Initial rewards should be between 100 and 200 to avoid "chance" convergence and to better see algorithmic differences.
+"""
+
 Random.seed!(14)
 
 env = DAP(20, 2, 4, 200)

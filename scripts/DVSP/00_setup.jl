@@ -1,6 +1,10 @@
 include("utils/utils.jl")
 
-## Environment setup
+"""
+Seeds used in the paper:
+
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+"""
 
 ## Baseline policies
 

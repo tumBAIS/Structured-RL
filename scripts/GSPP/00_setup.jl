@@ -1,5 +1,13 @@
 include("utils/utils.jl")
 
+"""
+Seeds used in the paper:
+
+[0, 7, 8, 33, 34, 39, 58, 62, 63, 98]
+
+Initial rewards should be sufficiently low to avoid "chance" convergence and to better see algorithmic differences.
+"""
+
 # Env initialization
 env = GridWorld();
 

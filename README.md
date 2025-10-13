@@ -47,3 +47,5 @@ julia --project=. folder/00_setup.jl
 ```
 3. Run the algorithm scripts 01_SIL.jl, 02_PPO.jl, and 03_SRL.jl (same as 2.)
 4. Run 04_plots.jl (same as 2.)
+
+To reproduce the results from the paper, please run the algorithms using ten random seeds and average the rewards across these seeds. The seeds used in the paper are stated in the respective setup script.
